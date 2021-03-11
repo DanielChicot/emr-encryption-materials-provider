@@ -90,7 +90,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: ../encryption-materials-provider-${{ needs.build.outputs.publish-version }}.jar
-          tag: ${{ github.ref }}
+          tag: ${{ needs.build.outputs.publish-version }}
           overwrite: true
 
 #      - name: notify-slack
